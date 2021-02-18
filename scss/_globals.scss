@@ -1,0 +1,123 @@
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+
+body {
+    // Mobile
+    margin: 0 1.5rem;
+
+    // Tablet
+    @include breakpoint-up(medium) {
+        margin: 0 2.5rem;
+    }
+    // Desktop
+
+    @include breakpoint-up(large) {
+        margin: 4rem 10rem;
+    }
+}
+
+h1 {
+    color: $darkGrey;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    font-weight: 700;
+}   
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1rem;
+    line-height: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+button {
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    font-weight: 700;
+
+    &.button1 {
+        color: white;
+        background-color: $darkerBlue;
+        box-shadow: 0 33px 25px hsla(228, 100%, 66%, .25);
+
+        &:hover {
+            background-color: $paleBlue;
+            transform: scale(1.05);
+            transition: transform 200ms ease-in-out;
+        }
+
+        @include breakpoint-up(large) {
+            margin-top: 2rem;
+        }
+    }
+
+    &.button2 {
+        color: $darkerBlue;
+        // This bg color doesn't seem right
+        background-color: $paleBlue;
+
+        // Needs hover state
+    }
+
+    &.button3 {
+        color: $darkerBlue;
+        background-color: white;
+
+        &:hover {
+            color: $paleBlue;
+        }
+    }
+}
+
+.logo {
+    display: block;
+    margin: 3rem auto;
+    width: 50%;
+
+    @include breakpoint-up(medium) {
+        margin: 3rem 0;
+        width: 20%;
+    }
+
+    @include breakpoint-up (large) {
+        width: 15%;
+        margin: 0;
+    }
+    
+
+}
+
+
+.bg-header {
+    // Mobile
+    width: 100%;
+    position: absolute;
+    top: -7.5rem;
+    left: -.125rem;
+    z-index: -1;
+
+    // Tablet
+    @include breakpoint-up(medium) {
+        top: -14rem;
+        left: 24rem;
+    }
+
+    // Desktop
+    @include breakpoint-up(large) {
+        width: 75%;
+        top: -25rem;
+        left: 40rem;
+    }
+}

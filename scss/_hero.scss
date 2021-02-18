@@ -1,0 +1,75 @@
+.hero {
+
+    display: grid;
+    grid-template-areas:
+    "image"
+    "text";
+    align-items: center;
+    
+    
+
+    @include breakpoint-up(medium) {
+        grid-template-areas: 
+        "text image"
+        "text image";
+        grid-template-columns: 50% 45%;
+        column-gap: 3.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        grid-template-columns: 50% 45%;
+        column-gap: 5rem;
+    }
+
+
+    &__text {
+            grid-area: text;
+            text-align: center;
+
+            @include breakpoint-up(medium) {
+                text-align: left;
+            }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 3rem;
+
+            @include breakpoint-up(large) {
+                font-size: 3.5rem;
+                line-height: 4rem;
+            }
+        }
+
+        p {
+            color: $lightGrey;
+            line-height: 1.625rem;
+
+            @include breakpoint-up(large) {
+                font-size: $body1;
+                line-height: 1.75rem;
+            }
+        }
+    }
+
+    &__image {
+            margin: 1rem 0;
+
+        img {
+            grid-area: image;
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+
+            @include breakpoint-up(medium) {
+                width: 100%;
+                padding-top: 5rem;
+            }
+
+            @include breakpoint-up(large) {
+                width: 100%;
+                padding-top: 7rem;
+            }
+        }
+            
+    }
+}
