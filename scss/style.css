@@ -542,7 +542,7 @@ button.button3:hover {
 }
 
 .hero__text {
-  -ms-grid-row: 2;
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: text;
   text-align: center;
@@ -925,6 +925,192 @@ button.button3:hover {
         align-self: center;
     margin-top: 20rem;
     margin-bottom: 0;
+  }
+}
+
+.signupHero {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "text" "form";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 40.0625rem) {
+  .signupHero {
+        grid-template-areas: "text form" "text form";
+    -ms-grid-columns: 50% 48%;
+        grid-template-columns: 50% 48%;
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .signupHero {
+    -ms-grid-columns: 50% 45%;
+        grid-template-columns: 50% 45%;
+    -webkit-column-gap: 5rem;
+            column-gap: 5rem;
+  }
+}
+
+.signupHero__text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
+  text-align: center;
+}
+
+@media (min-width: 40.0625rem) {
+  .signupHero__text {
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.signupHero__text h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+@media (min-width: 63rem) {
+  .signupHero__text h1 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+}
+
+.signupHero__text p {
+  line-height: 1.625rem;
+}
+
+@media (min-width: 63rem) {
+  .signupHero__text p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.signupHero__text button {
+  -webkit-box-shadow: 0 33px 25px rgba(82, 116, 255, 0.25);
+          box-shadow: 0 33px 25px rgba(82, 116, 255, 0.25);
+}
+
+.signupHero__form {
+  margin: 1rem 0;
+}
+
+.signupHero__form form {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: form;
+  display: -ms-grid;
+  display: grid;
+  padding: 2rem;
+  margin: 3rem 2rem;
+  border-radius: 0.75rem;
+  -webkit-box-shadow: -1rem 2rem 1rem rgba(0, 0, 0, 0.15);
+          box-shadow: -1rem 2rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: white;
+}
+
+.signupHero__form form input, .signupHero__form form select {
+  line-height: 4.5rem;
+  border: none;
+  border-bottom: 1px solid #747B95;
+}
+
+.signupHero__form form select {
+  padding: 2rem 1rem;
+}
+
+.signupHero__form form button {
+  margin-top: 2.5rem;
+}
+
+.signupHero h3 {
+  color: #25293A;
+  letter-spacing: .3rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .signupHero h3 {
+    padding: 1rem 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .signupHero h3 {
+    grid-area: coming;
+    text-align: left;
+  }
+}
+
+.signupHero h3 span {
+  color: #5175FF;
+  font-weight: 700;
+}
+
+.signupHero__countdown {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "num num num num";
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 63rem) {
+  .signupHero__countdown {
+    grid-area: countdown;
+    padding: 0;
+  }
+}
+
+.signupHero__countdown div {
+  background-color: rgba(128, 153, 255, 0.15);
+  border-radius: .25rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .signupHero__countdown div {
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+}
+
+.signupHero__countdown div .num {
+  color: #5175FF;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .signupHero__countdown div .num {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+.signupHero__countdown div .word {
+  text-transform: lowercase;
+  margin-top: 0;
+  font-weight: 700;
+  font-size: .75rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .signupHero__countdown div .word {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

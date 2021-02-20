@@ -10,49 +10,47 @@
     <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body>
-<main>
   <header id="header" class="container">
+    <img class="bg-header" src="/assets/home/bg-pattern-header.svg" alt="">
     <a href="/index.html"><img class="logo" src="assets/shared/logo.svg" alt="logo" ></a>
   </header>
 
-
-  <div class="hero container">
-    <div class="hero__text">
+<main>
+  <div class="signupHero container">
+    <div class="signupHero__text">
       <h1>Work smarter. Save time.</h1>
         <p>Easily manage your projects. Get on the list and receive in-app perks available only to 
           early subscribers. We are moving into final development and getting ready for official launch soon.</p>
-
-        <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-        <h3>Coming <span>4 Nov 2020</span></h3>
+                  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
+          <h3>Coming <span>4 Nov 2020</span></h3>
+          <div class="signupHero__countdown">
         <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-        <div class="">
           <div><p class="num">47</p><p class="word">Days</p></div>
           <div><p class="num">07</p><p class="word">Hours</p></div>
           <div><p class="num">56</p><p class="word">Min</p></div>
           <div><p class="num">14</p><p class="word">Sec</p></div>
         </div>
-    </div>
-    <div class="hero__image">
+      </div>
+    <div class="signupHero__form">
       <!-- Form Goes Here -->
+      <form action="">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email Address">
+          <select id="plans" name="plans" placeholder="">
+            <option value="">Basic Pack Free</option>
+            <option value="">Pro Pack $9.99</option>
+            <option value="">Ultimate Pack $19.99</option>
+          </select>
+        <input type="text" placeholder="Phone Number">
+        <input type="text" placeholder="Company">
+        <button>Get on the list</button>
+      </form>
+
     </div>
   </div>
-
-
-
-
-
-
 </main>
 
 
-  Name
-  Email Address
-  Basic Pack Free
-  Basic Pack Free
-  Pro Pack $9.99
-  Ultimate Pack $19.99
-  Phone Number
-  Company
-  Get on the list
+  
 </body>
 </html>
