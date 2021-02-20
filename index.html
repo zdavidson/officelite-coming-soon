@@ -10,32 +10,28 @@
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body>
+
   <header id="header" class="container">
     <img class="bg-header" src="/assets/home/bg-pattern-header.svg" alt="">
-    <a><img class="logo" src="assets/shared/logo.svg" alt="logo" ></a>
-    
+    <a href="/index.html"><img class="logo" src="assets/shared/logo.svg" alt="logo" ></a>
   </header>
-  <main>
 
-  
+  <main>
+    <!-- Hero Section -->
   <div class="hero container">
     <div class="hero__text">
       <h1>A simple solution to complex tasks is coming soon</h1>
-
-      <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
-      collaboration platform built with an intuitive interface to improve productivity.</p>
-    
-      <button class="button1">Get Started</button>
+        <p>Say goodbye to inefficient juggling of multiple apps, teams, and projects. Officelite is the new 
+        collaboration platform built with an intuitive interface to improve productivity.</p>
+        <a href="/sign-up.html"><button class="button1">Get Started</button></a>
     </div>
     <div class="hero__image">
       <img src="assets/home/illustration-charts.svg">
     </div>
-    
   </div>
 
-
+  <!-- Plans Section -->
   <div class="plans">
-
     <div class="plans__card whiteBg">
       <div class="costBox">
       <h2>Basic</h2>
@@ -49,7 +45,7 @@
         <li>Great security and support</li>
       </ul>
     </div>
-      <button class="button2">Try for Free</button>
+      <a href="/sign-up.html"><button class="button2">Try for Free</button></a>
     </div>
 
     <div class="plans__card blue">
@@ -63,7 +59,7 @@
         <li class="white">50 gb storage</li>
         <li class="white">More control and insights</li>
       </ul>
-      <button class="button3">Try for Free</button>
+      <a href="/sign-up.html"><button class="button3">Try for Free</button></a>
     </div>
 
     <div class="plans__card whiteBg">
@@ -77,27 +73,23 @@
         <li>100 gb storage</li>
         <li>VIP support</li>
       </ul>
-      <button class="button2">Try for Free</button>
+      <a href="/sign-up.html"><button class="button2">Try for Free</button></a>
     </div>
   </div>
 
-  
+<!-- Footer Section -->
 <footer class="footer">
+  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
   <h3>Coming <span>4 Nov 2020</span></h3>
+  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
   <div class="footer__countdown">
     <div><p class="num">47</p><p class="word">Days</p></div>
     <div><p class="num">07</p><p class="word">Hours</p></div>
     <div><p class="num">56</p><p class="word">Min</p></div>
     <div><p class="num">14</p><p class="word">Sec</p></div>
   </div>
-  <button class="button1">Get Started</button> 
+  <button class="button1"><a class="buttonCorrect" href="/sign-up.html">Get Started</a></button> 
 </footer>
-  <!-- If you're choosing to make this date dynamic, set it to 30 days in the future from the moment the visitor views the page -->
-  
-
-  <!-- If you're choosing to make this timer dynamic, have it countdown from the date you set above -->
-  
-
 </main>
 </body>
 </html>

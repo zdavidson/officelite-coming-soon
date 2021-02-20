@@ -410,6 +410,7 @@ button {
   padding: 1rem 3rem;
   border-radius: 2rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 button.button1 {
@@ -461,6 +462,12 @@ button.button3:hover {
   transition: -webkit-transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out;
   transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.buttonCorrect {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
 }
 
 .logo {
@@ -581,15 +588,6 @@ button.button3:hover {
   margin: 1rem 0;
 }
 
-.hero__image:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
-}
-
 @media (min-width: 40.0625rem) {
   .hero__image {
     padding-right: 2.5rem;
@@ -671,15 +669,6 @@ button.button3:hover {
   padding-bottom: 2.5rem;
   text-align: center;
       grid-template-areas: "cost" "list" "button";
-}
-
-.plans__card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: -webkit-transform 200ms ease-in-out;
-  transition: -webkit-transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out;
-  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
 @media (min-width: 40.0625rem) {
