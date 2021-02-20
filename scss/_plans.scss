@@ -1,0 +1,114 @@
+.plans{
+    display: grid;
+    row-gap: 2rem;
+    padding: 6rem 1.5rem;
+
+    .blue {
+        background-color: $darkerBlue;
+        background-image: url(/assets/home/bg-pattern-pricing.svg);
+        background-position: center bottom;
+    }
+
+    @include breakpoint-down(medium) {
+        text-align: center;
+    }
+
+    @include breakpoint-only(medium, large) {
+        margin: 0 1rem;
+        padding: 4rem 1.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        margin: 4rem 8.5rem;
+        padding: 0 1.5rem;
+        padding-bottom: 4rem;
+        grid-template-areas: 
+        "basic pro ultimate";
+        grid-gap: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &__card {
+        display: grid;
+        border-radius: .75rem;
+        box-shadow: 0 10px 25px hsla(0,0,0,0.15);
+        padding-top: 1rem;
+        padding-bottom: 2.5rem;
+        text-align: center;
+        
+
+        grid-template-areas: 
+        "cost"
+        "list"
+        "button";
+
+        @include breakpoint-only(medium, large) {
+            grid-template-areas: 
+            "cost list"
+            "button list";
+            text-align: left;
+            grid-column-gap: 5rem;
+        }
+
+        .cost {
+            color: $darkGrey;
+            font-size: 3.5rem;
+            line-height: 4rem;
+            font-weight: 700;
+            margin-bottom: 0;
+
+            @include breakpoint-only(medium, large) {
+                margin-top: 0;
+            }
+        }
+
+        .costBox {
+            grid-area: cost;
+
+            @include breakpoint-only(medium, large) {
+               padding-left: 4rem;
+            }
+        }
+
+        .dark, .light {
+            margin-top: 0;
+            margin-bottom: 3rem;
+
+            @include breakpoint-only(medium, large) {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .dark {
+            color: $darkGrey;
+        }
+
+        .light {
+            color: white;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .listBox {
+            grid-area: list;
+            align-self: end;
+            padding-bottom: 1.5rem;
+        }
+
+        ul {
+            margin: 1.5rem 0;
+        }
+
+        li {
+            color: $lightGrey;
+            padding: .5rem 0;
+        }
+
+        button {
+            grid-area: button;
+            justify-self: center;
+        }
+    }
+}

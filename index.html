@@ -10,7 +10,7 @@
   <title>Frontend Mentor | Officelite coming soon site</title>
 </head>
 <body>
-  <header>
+  <header id="header" class="container">
     <img class="bg-header" src="/assets/home/bg-pattern-header.svg" alt="">
     <a><img class="logo" src="assets/shared/logo.svg" alt="logo" ></a>
     
@@ -18,7 +18,7 @@
   <main>
 
   
-  <div class="hero">
+  <div class="hero container">
     <div class="hero__text">
       <h1>A simple solution to complex tasks is coming soon</h1>
 
@@ -31,36 +31,54 @@
       <img src="assets/home/illustration-charts.svg">
     </div>
     
-
   </div>
 
 
   <div class="plans">
-    Basic
-    Free
-    Up to 5 users for free
-    Basic document collaboration
-    2 gb storage
-    Great security and support
-    Try for Free
-  
-    Pro
-    $9.99
-    Per user, billed monthly
-    All essential integrations
-    50 gb storage
-    More control and insights
-    Try for Free
-  
-    Ultimate
-    $19.99
-    Per user, billed monthly
-    Robust work management
-    100 gb storage
-    VIP support
-    Try for Free
 
+    <div class="plans__card">
+      <div class="costBox">
+      <h2>Basic</h2>
+      <p class="cost">Free</p>
+      <p class="dark">Up to 5 users for free</p>
+    </div>
+    <div class="listBox">
+      <ul>
+        <li>Basic document collaboration</li>
+        <li>2 gb storage</li>
+        <li>Great security and support</li>
+      </ul>
+    </div>
+      <button class="button2">Try for Free</button>
+    </div>
 
+    <div class="plans__card blue">
+      <div class="costBox">
+      <h2 class="light">Pro</h2>
+      <p class="cost white">$9.99</p>
+      <p class="light">Per user, billed monthly</p>
+    </div>
+      <ul>
+        <li class="white">All essential integrations</li>
+        <li class="white">50 gb storage</li>
+        <li class="white">More control and insights</li>
+      </ul>
+      <button class="button3">Try for Free</button>
+    </div>
+
+    <div class="plans__card">
+      <div class="costBox">
+      <h2>Ultimate</h2>
+      <p class="cost">$19.99</p>
+      <p class="dark">Per user, billed monthly</p>
+    </div>
+      <ul>
+        <li>Robust work management</li>
+        <li>100 gb storage</li>
+        <li>VIP support</li>
+      </ul>
+      <button class="button2">Try for Free</button>
+    </div>
   </div>
 
   

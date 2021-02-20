@@ -1,5 +1,4 @@
 .hero {
-
     display: grid;
     grid-template-areas:
     "image"
@@ -12,8 +11,8 @@
         grid-template-areas: 
         "text image"
         "text image";
-        grid-template-columns: 50% 45%;
-        column-gap: 3.5rem;
+        grid-template-columns: 50% 48%;
+        column-gap: 3rem;
     }
 
     @include breakpoint-up(large) {
@@ -28,6 +27,8 @@
 
             @include breakpoint-up(medium) {
                 text-align: left;
+                padding-left: 1rem;
+                padding-bottom: 3rem;
             }
 
         h1 {
@@ -41,7 +42,6 @@
         }
 
         p {
-            color: $lightGrey;
             line-height: 1.625rem;
 
             @include breakpoint-up(large) {
@@ -54,6 +54,11 @@
     &__image {
             margin: 1rem 0;
 
+            @include breakpoint-up(medium) {
+                padding-right: 2.5rem;
+            }
+            
+
         img {
             grid-area: image;
             display: block;
@@ -62,12 +67,12 @@
 
             @include breakpoint-up(medium) {
                 width: 100%;
-                padding-top: 5rem;
+                padding-top: 2.5rem;
             }
 
             @include breakpoint-up(large) {
                 width: 100%;
-                padding-top: 7rem;
+                padding-top: 2rem;
             }
         }
             

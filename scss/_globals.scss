@@ -6,18 +6,29 @@
     overflow-x: hidden;
 }
 
-body {
+.container {
     // Mobile
     margin: 0 1.5rem;
 
+    @include breakpoint-down(medium) {
+        text-align: center;
+    }
+
     // Tablet
     @include breakpoint-up(medium) {
-        margin: 0 2.5rem;
+        margin: 0;
+        padding: 0 1.5rem;
     }
     // Desktop
 
     @include breakpoint-up(large) {
         margin: 4rem 10rem;
+    }
+}
+
+#header {
+    @include breakpoint-up(medium) {
+        padding: 0 2.5rem;
     }
 }
 
@@ -38,6 +49,14 @@ h3 {
     line-height: 3rem;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+p {
+    color: $lightGrey;
+}
+
+ul {
+    padding: 0;
 }
 
 
@@ -66,8 +85,8 @@ button {
     &.button2 {
         color: $darkerBlue;
         // This bg color doesn't seem right
-        background-color: $paleBlue;
-
+        background-color: $paleBlueFaded;
+        
         // Needs hover state
     }
 

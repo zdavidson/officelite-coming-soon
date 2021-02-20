@@ -349,19 +349,32 @@ template {
   overflow-x: hidden;
 }
 
-body {
+.container {
   margin: 0 1.5rem;
 }
 
+@media (max-width: 62.9375rem) {
+  .container {
+    text-align: center;
+  }
+}
+
 @media (min-width: 40.0625rem) {
-  body {
-    margin: 0 2.5rem;
+  .container {
+    margin: 0;
+    padding: 0 1.5rem;
   }
 }
 
 @media (min-width: 63rem) {
-  body {
+  .container {
     margin: 4rem 10rem;
+  }
+}
+
+@media (min-width: 40.0625rem) {
+  #header {
+    padding: 0 2.5rem;
   }
 }
 
@@ -382,6 +395,14 @@ h3 {
   line-height: 3rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+p {
+  color: #747B95;
+}
+
+ul {
+  padding: 0;
 }
 
 button {
@@ -416,7 +437,7 @@ button.button1:hover {
 
 button.button2 {
   color: #5175FF;
-  background-color: #829CFF;
+  background-color: rgba(128, 153, 255, 0.15);
 }
 
 button.button3 {
@@ -483,10 +504,10 @@ button.button3:hover {
 @media (min-width: 40.0625rem) {
   .hero {
         grid-template-areas: "text image" "text image";
-    -ms-grid-columns: 50% 45%;
-        grid-template-columns: 50% 45%;
-    -webkit-column-gap: 3.5rem;
-            column-gap: 3.5rem;
+    -ms-grid-columns: 50% 48%;
+        grid-template-columns: 50% 48%;
+    -webkit-column-gap: 3rem;
+            column-gap: 3rem;
   }
 }
 
@@ -509,6 +530,8 @@ button.button3:hover {
 @media (min-width: 40.0625rem) {
   .hero__text {
     text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 3rem;
   }
 }
 
@@ -525,7 +548,6 @@ button.button3:hover {
 }
 
 .hero__text p {
-  color: #747B95;
   line-height: 1.625rem;
 }
 
@@ -540,6 +562,12 @@ button.button3:hover {
   margin: 1rem 0;
 }
 
+@media (min-width: 40.0625rem) {
+  .hero__image {
+    padding-right: 2.5rem;
+  }
+}
+
 .hero__image img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -552,14 +580,148 @@ button.button3:hover {
 @media (min-width: 40.0625rem) {
   .hero__image img {
     width: 100%;
-    padding-top: 5rem;
+    padding-top: 2.5rem;
   }
 }
 
 @media (min-width: 63rem) {
   .hero__image img {
     width: 100%;
-    padding-top: 7rem;
+    padding-top: 2rem;
   }
+}
+
+.plans {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 2rem;
+  padding: 6rem 1.5rem;
+}
+
+.plans .blue {
+  background-color: #5175FF;
+  background-image: url(/assets/home/bg-pattern-pricing.svg);
+  background-position: center bottom;
+}
+
+@media (max-width: 62.9375rem) {
+  .plans {
+    text-align: center;
+  }
+}
+
+@media (min-width: (max-width)) {
+  .plans {
+    margin: 0 1rem;
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .plans {
+    margin: 4rem 8.5rem;
+    padding: 0 1.5rem;
+    padding-bottom: 4rem;
+        grid-template-areas: "basic pro ultimate";
+    grid-gap: 2rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.plans__card {
+  display: -ms-grid;
+  display: grid;
+  border-radius: .75rem;
+  -webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+      grid-template-areas: "cost" "list" "button";
+}
+
+@media (min-width: (max-width)) {
+  .plans__card {
+        grid-template-areas: "cost list" "button list";
+    text-align: left;
+    grid-column-gap: 5rem;
+  }
+}
+
+.plans__card .cost {
+  color: #25293A;
+  font-size: 3.5rem;
+  line-height: 4rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+@media (min-width: (max-width)) {
+  .plans__card .cost {
+    margin-top: 0;
+  }
+}
+
+.plans__card .costBox {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: cost;
+}
+
+@media (min-width: (max-width)) {
+  .plans__card .costBox {
+    padding-left: 4rem;
+  }
+}
+
+.plans__card .dark, .plans__card .light {
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: (max-width)) {
+  .plans__card .dark, .plans__card .light {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.plans__card .dark {
+  color: #25293A;
+}
+
+.plans__card .light {
+  color: white;
+}
+
+.plans__card .white {
+  color: white;
+}
+
+.plans__card .listBox {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: list;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  padding-bottom: 1.5rem;
+}
+
+.plans__card ul {
+  margin: 1.5rem 0;
+}
+
+.plans__card li {
+  color: #747B95;
+  padding: .5rem 0;
+}
+
+.plans__card button {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: button;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 /*# sourceMappingURL=style.css.map */

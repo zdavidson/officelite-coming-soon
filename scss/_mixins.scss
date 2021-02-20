@@ -17,3 +17,9 @@ $breakpoints-down: ("small": "40rem", "medium": "62.9375rem");
         @content;
     }
 }
+
+@mixin breakpoint-only($size1, $size2) {
+    @media (min-width: map-get($breakpoints-up, $size1) and (max-width: map-get($breakpoints-down, $size2))) {
+        @content;
+    }
+}
