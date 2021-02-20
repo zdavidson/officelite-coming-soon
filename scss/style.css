@@ -415,8 +415,6 @@ button {
 button.button1 {
   color: white;
   background-color: #5175FF;
-  -webkit-box-shadow: 0 33px 25px rgba(82, 116, 255, 0.25);
-          box-shadow: 0 33px 25px rgba(82, 116, 255, 0.25);
 }
 
 button.button1:hover {
@@ -558,6 +556,11 @@ button.button3:hover {
   }
 }
 
+.hero__text button {
+  -webkit-box-shadow: 0 33px 25px rgba(82, 116, 255, 0.25);
+          box-shadow: 0 33px 25px rgba(82, 116, 255, 0.25);
+}
+
 .hero__image {
   margin: 1rem 0;
 }
@@ -604,13 +607,17 @@ button.button3:hover {
   background-position: center bottom;
 }
 
+.plans .whiteBg {
+  background-color: white;
+}
+
 @media (max-width: 62.9375rem) {
   .plans {
     text-align: center;
   }
 }
 
-@media (min-width: (max-width)) {
+@media (min-width: 40.0625rem) {
   .plans {
     margin: 0 1rem;
     padding: 4rem 1.5rem;
@@ -641,11 +648,18 @@ button.button3:hover {
       grid-template-areas: "cost" "list" "button";
 }
 
-@media (min-width: (max-width)) {
+@media (min-width: 40.0625rem) {
   .plans__card {
         grid-template-areas: "cost list" "button list";
     text-align: left;
     grid-column-gap: 5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .plans__card {
+    text-align: center;
+        grid-template-areas: "cost" "list" "button";
   }
 }
 
@@ -657,9 +671,15 @@ button.button3:hover {
   margin-bottom: 0;
 }
 
-@media (min-width: (max-width)) {
+@media (min-width: 40.0625rem) {
   .plans__card .cost {
     margin-top: 0;
+  }
+}
+
+@media (min-width: 63rem) {
+  .plans__card .cost {
+    margin-top: 4rem;
   }
 }
 
@@ -669,9 +689,15 @@ button.button3:hover {
   grid-area: cost;
 }
 
-@media (min-width: (max-width)) {
+@media (min-width: 40.0625rem) {
   .plans__card .costBox {
     padding-left: 4rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .plans__card .costBox {
+    padding: 0 1.5rem;
   }
 }
 
@@ -680,9 +706,15 @@ button.button3:hover {
   margin-bottom: 3rem;
 }
 
-@media (min-width: (max-width)) {
+@media (min-width: 40.0625rem) {
   .plans__card .dark, .plans__card .light {
     margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .plans__card .dark, .plans__card .light {
+    margin-bottom: 3rem;
   }
 }
 
@@ -723,5 +755,144 @@ button.button3:hover {
   grid-area: button;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.footer {
+  background-image: url(/assets/home/bg-pattern-footer.svg);
+  width: 100%;
+  height: 150%;
+  background-color: #25293A;
+  background-position: center;
+  position: absolute;
+  bottom: -130rem;
+  z-index: -10;
+  text-align: center;
+}
+
+@media (min-width: 40.0625rem) {
+  .footer {
+    bottom: -66rem;
+    height: 100%;
+    background-position: top;
+  }
+}
+
+@media (min-width: 63rem) {
+  .footer {
+    bottom: -73rem;
+    background-position: right;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: ". button" "coming button" "countdown button" ". .";
+    -ms-grid-rows: 2.5fr .5fr 1.125fr 1fr;
+        grid-template-rows: 2.5fr .5fr 1.125fr 1fr;
+  }
+}
+
+.footer h3 {
+  padding-top: 55rem;
+  color: white;
+  letter-spacing: .3rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .footer h3 {
+    padding-top: 34rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .footer h3 {
+    padding-top: 0;
+    grid-area: coming;
+    text-align: left;
+    padding-left: 11rem;
+  }
+}
+
+.footer h3 span {
+  color: #5175FF;
+  font-weight: 700;
+}
+
+.footer__countdown {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "num num num num";
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 1rem;
+  padding: 2rem 1rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .footer__countdown {
+    padding: 2rem 11rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .footer__countdown {
+    grid-area: countdown;
+  }
+}
+
+.footer__countdown div {
+  background-color: #333950;
+  border-radius: .25rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .footer__countdown div {
+    border-radius: 0.5rem;
+  }
+}
+
+.footer__countdown div .num {
+  color: white;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .footer__countdown div .num {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+
+.footer__countdown div .word {
+  text-transform: lowercase;
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.footer button {
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 40.0625rem) {
+  .footer button {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (min-width: 63rem) {
+  .footer button {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: button;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-top: 20rem;
+    margin-bottom: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

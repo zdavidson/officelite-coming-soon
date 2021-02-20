@@ -49,6 +49,10 @@
                 line-height: 1.75rem;
             }
         }
+
+        button {
+            box-shadow: 0 33px 25px hsla(228, 100%, 66%, .25);
+        }
     }
 
     &__image {

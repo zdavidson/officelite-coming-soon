@@ -1,4 +1,4 @@
-.plans{
+.plans {
     display: grid;
     row-gap: 2rem;
     padding: 6rem 1.5rem;
@@ -9,11 +9,15 @@
         background-position: center bottom;
     }
 
+    .whiteBg {
+        background-color: white;
+    }
+
     @include breakpoint-down(medium) {
         text-align: center;
     }
 
-    @include breakpoint-only(medium, large) {
+    @include breakpoint-up(medium) {
         margin: 0 1rem;
         padding: 4rem 1.5rem;
     }
@@ -42,12 +46,20 @@
         "list"
         "button";
 
-        @include breakpoint-only(medium, large) {
+        @include breakpoint-up(medium) {
             grid-template-areas: 
             "cost list"
             "button list";
             text-align: left;
             grid-column-gap: 5rem;
+        }
+
+        @include breakpoint-up(large) {
+            text-align: center;
+            grid-template-areas: 
+            "cost"
+            "list"
+            "button";
         }
 
         .cost {
@@ -57,16 +69,24 @@
             font-weight: 700;
             margin-bottom: 0;
 
-            @include breakpoint-only(medium, large) {
+            @include breakpoint-up(medium) {
                 margin-top: 0;
+            }
+
+            @include breakpoint-up(large) {
+                margin-top: 4rem;
             }
         }
 
         .costBox {
             grid-area: cost;
 
-            @include breakpoint-only(medium, large) {
+            @include breakpoint-up(medium) {
                padding-left: 4rem;
+            }
+
+            @include breakpoint-up(large){
+                padding: 0 1.5rem;
             }
         }
 
@@ -74,8 +94,12 @@
             margin-top: 0;
             margin-bottom: 3rem;
 
-            @include breakpoint-only(medium, large) {
+            @include breakpoint-up(medium) {
                 margin-bottom: 1.5rem;
+            }
+
+            @include breakpoint-up(large) {
+                margin-bottom: 3rem;
             }
         }
 
