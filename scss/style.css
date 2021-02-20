@@ -438,6 +438,16 @@ button.button2 {
   background-color: rgba(128, 153, 255, 0.15);
 }
 
+button.button2:hover {
+  background-color: rgba(128, 153, 255, 0.25);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
 button.button3 {
   color: #5175FF;
   background-color: white;
@@ -445,6 +455,12 @@ button.button3 {
 
 button.button3:hover {
   color: #829CFF;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
 .logo {
@@ -565,6 +581,15 @@ button.button3:hover {
   margin: 1rem 0;
 }
 
+.hero__image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
 @media (min-width: 40.0625rem) {
   .hero__image {
     padding-right: 2.5rem;
@@ -646,6 +671,15 @@ button.button3:hover {
   padding-bottom: 2.5rem;
   text-align: center;
       grid-template-areas: "cost" "list" "button";
+}
+
+.plans__card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
 @media (min-width: 40.0625rem) {
@@ -840,6 +874,15 @@ button.button3:hover {
 .footer__countdown div {
   background-color: #333950;
   border-radius: .25rem;
+}
+
+.footer__countdown div:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
 }
 
 @media (min-width: 40.0625rem) {

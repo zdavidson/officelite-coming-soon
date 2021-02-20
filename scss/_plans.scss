@@ -46,6 +46,11 @@
         "list"
         "button";
 
+        &:hover {
+            transform: scale(1.05);
+            transition: transform 200ms ease-in-out;
+        }
+
         @include breakpoint-up(medium) {
             grid-template-areas: 
             "cost list"

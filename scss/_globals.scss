@@ -84,10 +84,12 @@ button {
 
     &.button2 {
         color: $darkerBlue;
-        // This bg color doesn't seem right
         background-color: $paleBlueFaded;
-        
-        // Needs hover state
+        &:hover {
+            background-color: $paleBlueFaded2;
+            transform: scale(1.05);
+            transition: transform 200ms ease-in-out;
+        }
     }
 
     &.button3 {
@@ -96,6 +98,8 @@ button {
 
         &:hover {
             color: $paleBlue;
+            transform: scale(1.05);
+            transition: transform 200ms ease-in-out;
         }
     }
 }
